@@ -28,12 +28,12 @@ router.post('/', auth, async (req, res) => {
     let user = await User.findOne(req.body);
 
     if (user) {
-      return res.status(400).json({ msg: 'User already registered' });
+      return res.status(400).send('User already registered');
+    } else {
+      user = new User(req.body);
+      await user.save();
+      return res.json(user);
     }
-
-    user = new User(req.body);
-    await user.save();
-    return res.json(user);
   } catch (error) {
     console.error(`Error ocurred: ${error.message}`);
     return res.status(500).send('Server error');
