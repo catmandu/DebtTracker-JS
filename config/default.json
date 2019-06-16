@@ -1,0 +1,4 @@
+{
+  "connectionString": "mongodb+srv://readUser:ea38d4a6e73f5d7d20269aba92287e90a2595290fdbc779f6228ebd98cb7bf96@debttrackercluster-hiwxw.mongodb.net/DebtTrackerDB?retryWrites=true&w=majority",
+  "secret": "e362cbf68690b40a9a18f423507d6cab4a20465caa921f48f857abc722cbd5ad"
+}
