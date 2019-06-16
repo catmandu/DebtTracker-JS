@@ -25,6 +25,7 @@ router.get('/', auth, async (req, res) => {
 // Create a new user
 router.post('/', auth, async (req, res) => {
   try {
+    req.body.name = req.body.name.toUpperCase();
     let user = await User.findOne(req.body);
 
     if (user) {
