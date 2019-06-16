@@ -32,7 +32,7 @@ router.post('/', auth, async (req, res) => {
     }
 
     user = new User(req.body);
-    user.save();
+    await user.save();
     return res.json(user);
   } catch (error) {
     console.error(`Error ocurred: ${error.message}`);
